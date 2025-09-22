@@ -1,0 +1,20 @@
+<div class="game-card">
+  <img *ngIf="imageUrl" [src]="imageUrl" [alt]="game.name" />
+  <a [routerLink]="['/games', game.key]" ><h3>{{ game.name }}</h3></a>
+  <p class="genres" *ngIf="genres.length">
+    {{ genres.join(', ') }}
+  </p>
+  <div class="bottom">
+    <ng-container *ngIf="game.discount > 0; else noDiscount">
+      <span class="old-price">${{ game.price }}</span>
+      <span class="new-price">
+        ${{ (game.price * (1 - game.discount / 100)).toFixed(2) }}
+      </span>
+      <span class="discount">-{{ game.discount }}%</span>
+    </ng-container>
+
+    <ng-template #noDiscount>
+      <span class="price">${{ game.price }}</span>
+    </ng-template>
+  </div>
+</div>

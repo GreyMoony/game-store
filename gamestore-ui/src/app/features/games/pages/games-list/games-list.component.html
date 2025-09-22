@@ -1,0 +1,47 @@
+<div class="games-list-page">
+
+  <div class="layout">
+    <div>
+      <div class="header">
+        <h2 class="section-title">{{ 'GAMESLIST.Games' | t }}</h2>
+        <div class="search-wrapper">
+          <app-search-bar (search)="onSearch($event)"></app-search-bar>
+        </div>
+        <button class="filters-toggle" (click)="showFilters = true">
+          {{ 'GAMESLIST.Filters' | t }}
+        </button>
+      </div>
+      <div class="games-grid">
+        <ng-container *ngIf="loading; else gamesList">
+          <div class="skeleton-card" *ngFor="let n of [].constructor(10)"></div>
+        </ng-container>
+
+        <ng-template #gamesList>
+          <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
+        </ng-template>
+      </div>
+      <div class="pagination" *ngIf="totalPages > 1">
+        <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">
+          < </button>
+            <ng-container *ngFor="let page of pagesToDisplay">
+              <button *ngIf="page !== '...'; else dots" [class.active]="page === currentPage"
+                (click)="onPageChange(page)">
+                {{ page }}
+              </button>
+              <ng-template #dots>
+                <span class="dots">...</span>
+              </ng-template>
+            </ng-container>
+
+            <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">
+              >
+            </button>
+      </div>
+    </div>
+
+    <aside class="filters-wrapper" [class.open]="showFilters">
+      <button class="close-btn" (click)="showFilters = false">✕</button>
+      <app-games-filters (filtersChange)="onFilterChange($event)"></app-games-filters>
+    </aside>
+  </div>
+</div>

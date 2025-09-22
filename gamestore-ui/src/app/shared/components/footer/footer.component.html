@@ -1,0 +1,99 @@
+<div class="info">
+  <div class="grid grid-3">
+
+    <div class="card">
+      <h3 class="title">{{ 'FOOTER.GetInTouch' | t }}</h3>
+      <form class="form">
+        <label for="name" class="muted">{{ 'FOOTER.Name' | t }}</label>
+        <input id="name" type="text" />
+        <label for="email" class="muted">{{ 'FOOTER.Email' | t }}</label>
+        <input id="email"type="email" />
+        <label for="message" class="muted">{{ 'FOOTER.Message' | t }}</label>
+        <textarea id="message" rows="4"></textarea>
+        <button type="button" class="btn">{{ 'FOOTER.Submit' | t }}</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3 class="title">{{ 'FOOTER.TwitterUpdates' | t }}</h3>
+      <ul class="list">
+        <li>
+          Devil May Cry 5<br />
+          <a href="#">http://goo.gl/eVm</a><br />
+          <span class="muted">about 1 hour ago reply</span>
+        </li>
+        <li>
+          Dead or Alive 6 Special Edition<br />
+          <a href="#">http://goo.gl/eVm</a><br />
+          <span class="muted">about 1 hour ago reply</span>
+        </li>
+        <li>
+          Resident Evil 2 Deluxe Edition<br />
+          <a href="#">http://goo.gl/eVm</a><br />
+          <span class="muted">about 1 hour ago reply</span>
+        </li>
+      </ul>
+      <button class="btn">{{ 'FOOTER.FollowUs' | t }}</button>
+    </div>
+
+    <div class="card">
+      <h3 class="title">{{ 'FOOTER.FromTheBlog' | t }}</h3>
+      <ul class="list">
+        <li>
+          Proin commodo sodales arcu, a volutpat. <a href="#">{{ 'FOOTER.LearnMore' | t }}</a>
+        </li>
+        <li>
+          Curabitur a aliquet turpis, sagittis eleifend sem. <a href="#">{{ 'FOOTER.LearnMore' | t }}</a>
+        </li>
+        <li>
+          Nam pellentesque finibus felis eget feugiat. <a href="#">{{ 'FOOTER.LearnMore' | t }}</a>
+        </li>
+      </ul>
+      <button class="btn">{{ 'FOOTER.VisitBlog' | t }}</button>
+    </div>
+  </div>
+</div>
+<footer class="ft">
+  <div class="container grid grid-3">
+    <div>
+      <h4>{{ 'FOOTER.SiteLinks' | t }}</h4>
+      <ul class="links">
+        <li><a routerLink="/games">{{ 'FOOTER.Games' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.Genres' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.Publishers' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.Orders' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.MyBucket' | t }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>{{ 'FOOTER.CompanyInformation' | t }}</h4>
+      <ul class="links">
+        <li><a routerLink="/">{{ 'FOOTER.AboutUs' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.Awards' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.Reviews' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.Testimonials' | t }}</a></li>
+        <li><a routerLink="/">{{ 'FOOTER.Contacts' | t }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>{{ 'FOOTER.SocialMedia' | t }}</h4>
+      <div class="social">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:example@email.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container copy">©2007 - 2019 {{ 'FOOTER.COPYRIGHT' | t }}</div>
+</footer>

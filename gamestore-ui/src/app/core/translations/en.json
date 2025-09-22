@@ -1,0 +1,79 @@
+{
+  "HEADER": {
+    "LOGO": "Logo",
+    "GAMES": "GAMES",
+    "GENRES": "GENRES",
+    "PUBLISHERS": "PUBLISHERS",
+    "ORDERS": "ORDERS",
+    "CART": "CART"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "All rights reserved.",
+    "GetInTouch": "Get In Touch",
+    "Name": "Name",
+    "Email": "Email",
+    "Message": "Message",
+    "Submit": "Submit",
+    "TwitterUpdates": "Twitter Updates",
+    "FollowUs": "Follow Us",
+    "FromTheBlog": "From The Blog",
+    "LearnMore": "Learn More",
+    "VisitBlog": "Visit Blog",
+    "SiteLinks": "Site Links",
+    "Games": "Games",
+    "Genres": "Genres",
+    "Publishers": "Publishers",
+    "Orders": "Orders",
+    "MyBucket": "My Bucket",
+    "CompanyInformation": "Company Information",
+    "AboutUs": "About Us",
+    "Awards": "Awards",
+    "Reviews": "Reviews",
+    "Testimonials": "Testimonials",
+    "Contacts": "Contacts",
+    "SocialMedia": "Social Media"
+  },
+  "MAIN": {
+    "LearnMore": "Learn More"
+  },
+  "GAMESLIST": {
+    "Games": "Games",
+    "Filters": "Filters",
+    "SearchForGame": "Search For Game",
+    "RefineResults": "Refine Results",
+    "Sorting": "Sorting",
+    "SelectSorting": "-- Select sorting --",
+    "PriceRange": "Price Range",
+    "Publisher": "Publisher",
+    "ReleaseDate": "Release Date",
+    "Genre": "Genre",
+    "Platform": "Platform",
+    "Most popular": "Most popular",
+    "Most commented": "Most commented",
+    "Price ASC": "Price ASC",
+    "Price DESC": "Price DESC",
+    "New": "New"
+  },
+  "GAMEDETAILS": {
+    "GoBack": "Go Back to Games List",
+    "Tax": "Tax",
+    "PlayableOn": "Playable On",
+    "Genres": "Genres",
+    "AddToCart": "Add to Cart",
+    "GameDescription": "Game Description",
+    "Comments": "Comments",
+    "WriteAComment": "Write A Comment",
+    "Reply": "Reply",
+    "Quote": "Quote"
+  },
+  "CART": {
+    "Cart": "Cart",
+    "Items": "items",
+    "Remove": "Remove",
+    "OrderSummary": "Order Summary",
+    "Subtotal": "Subtotal",
+    "Total": "Total",
+    "Taxes": "Taxes",
+    "Checkout": "Checkout"
+  }
+}

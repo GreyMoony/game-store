@@ -1,0 +1,79 @@
+{
+  "HEADER": {
+    "LOGO": "Лого",
+    "GAMES": "ІГРИ",
+    "GENRES": "ЖАНРИ",
+    "PUBLISHERS": "ВИДАВЦІ",
+    "ORDERS": "ЗАМОВЛЕННЯ",
+    "CART": "КОРЗИНА"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Всі права захищено",
+    "GetInTouch": "Залишайтесь на зв'язку",
+    "Name": "Ім'я",
+    "Email": "Пошта",
+    "Message": "Повідомлення",
+    "Submit": "Відправити",
+    "TwitterUpdates": "Новини Твітера",
+    "FollowUs": "Слідкуй за нами",
+    "FromTheBlog": "Із блогу",
+    "LearnMore": "Дізнатись більше",
+    "VisitBlog": "Відвідати блог",
+    "SiteLinks": "Посилання",
+    "Games": "Ігри",
+    "Genres": "Жанри",
+    "Publishers": "Видавці",
+    "Orders": "Замовлення",
+    "MyBucket": "Мій кошик",
+    "CompanyInformation": "Інформація про компанію",
+    "AboutUs": "Про нас",
+    "Awards": "Нагороди",
+    "Reviews": "Огляди",
+    "Testimonials": "Відгуки",
+    "Contacts": "Контакти",
+    "SocialMedia": "Соціальні мережі"
+  },
+  "MAIN": {
+    "LearnMore": "Дізнатись більше"
+  },
+  "GAMESLIST": {
+    "Games": "Ігри",
+    "Filters": "Фільтри",
+    "SearchForGame": "Пошук ігор",
+    "RefineResults": "Уточнити результати",
+    "Sorting": "Сортування",
+    "SelectSorting": "-- Сортувати за --",
+    "PriceRange": "Ціновий діапазон",
+    "Publisher": "Видавець",
+    "ReleaseDate": "Дата випуску",
+    "Genre": "Жанр",
+    "Platform": "Платформа",
+    "Most popular": "Найпопулярніші",
+    "Most commented": "Найбільше коментовані",
+    "Price ASC": "Ціна за зростанням",
+    "Price DESC": "Ціна за спаданням",
+    "New": "Нові"
+  },
+  "GAMEDETAILS": {
+    "GoBack": "Повернутись до списку ігор",
+    "Tax": "Податок",
+    "PlayableOn": "Грається на",
+    "Genres": "Жанри",
+    "AddToCart": "Додати до корзини",
+    "GameDescription": "Опис гри",
+    "Comments": "Коментарі",
+    "WriteAComment": "Написати коментар",
+    "Reply": "Відповісти",
+    "Quote": "Цитувати"
+  },
+  "CART": {
+    "Cart": "Кошик",
+    "Items": "товари",
+    "Remove": "Видалити",
+    "OrderSummary": "Підсумок Замовлення",
+    "Subtotal": "Підсумок",
+    "Total": "Загалом",
+    "Taxes": "Податки",
+    "Checkout": "Оформити замовлення"
+  }
+}

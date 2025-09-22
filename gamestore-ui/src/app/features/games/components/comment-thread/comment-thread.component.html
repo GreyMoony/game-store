@@ -1,0 +1,25 @@
+<div class="comment" [class.child]="true">
+  <div class="avatar">{{ comment.name[0] | uppercase }}</div>
+  <div class="body">
+    <div class="head"><strong>{{ comment.name }}</strong></div>
+    <p>{{ comment.body }}</p>
+
+    <div class="actions">
+      <button class="like" [class.liked]="isLiked(comment.id)" (click)="toggleLike(comment.id)">
+        👍 <span>{{ likesFor(comment.id) }}</span>
+      </button>
+      <span class="sep">•</span><span class="muted">{{ 'GAMEDETAILS.Reply' | t }}</span>
+      <span class="sep">•</span><span class="muted">{{ 'GAMEDETAILS.Quote' | t }}</span>
+    </div>
+
+    <div class="children" *ngIf="comment.childComments?.length">
+      <app-comment-thread
+        *ngFor="let cc of comment.childComments"
+        [comment]="cc"
+        [isLiked]="isLiked"
+        [likesFor]="likesFor"
+        [toggleLike]="toggleLike">
+      </app-comment-thread>
+    </div>
+  </div>
+</div>

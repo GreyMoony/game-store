@@ -1,0 +1,79 @@
+{
+  "HEADER": {
+    "LOGO": "Logo",
+    "GAMES": "JUEGOS",
+    "GENRES": "GÉNEROS",
+    "PUBLISHERS": "EDITORES",
+    "ORDERS": "PEDIDOS",
+    "CART": "CARRITO"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Todos los derechos reservados.",
+    "GetInTouch": "Contáctanos",
+    "Name": "Nombre",
+    "Email": "Correo electrónico",
+    "Message": "Mensaje",
+    "Submit": "Enviar",
+    "TwitterUpdates": "Actualizaciones en Twitter",
+    "FollowUs": "Síguenos",
+    "FromTheBlog": "Del Blog",
+    "LearnMore": "Aprender más",
+    "VisitBlog": "Visitar Blog",
+    "SiteLinks": "Enlaces del sitio",
+    "Games": "Juegos",
+    "Genres": "Géneros",
+    "Publishers": "Editores",
+    "Orders": "Pedidos",
+    "MyBucket": "Mi Carrito",
+    "CompanyInformation": "Información de la Compañía",
+    "AboutUs": "Sobre Nosotros",
+    "Awards": "Premios",
+    "Reviews": "Reseñas",
+    "Testimonials": "Testimonios",
+    "Contacts": "Contactos",
+    "SocialMedia": "Redes Sociales"
+  },
+  "MAIN": {
+    "LearnMore": "Aprender más"
+  },
+  "GAMESLIST": {
+    "Games": "Juegos",
+    "Filters": "Filtros",
+    "SearchForGame": "Buscar Juego",
+    "RefineResults": "Refinar Resultados",
+    "Sorting": "Ordenar",
+    "SelectSorting": "-- Seleccionar orden --",
+    "PriceRange": "Rango de Precios",
+    "Publisher": "Editor",
+    "ReleaseDate": "Fecha de Lanzamiento",
+    "Genre": "Género",
+    "Platform": "Plataforma",
+    "Most popular": "Más populares",
+    "Most commented": "Más comentados",
+    "Price ASC": "Precio ASC",
+    "Price DESC": "Precio DESC",
+    "New": "Nuevo"
+  },
+  "GAMEDETAILS": {
+    "GoBack": "Volver a la Lista de Juegos",
+    "Tax": "Impuesto",
+    "PlayableOn": "Jugable en",
+    "Genres": "Géneros",
+    "AddToCart": "Añadir al Carrito",
+    "GameDescription": "Descripción del Juego",
+    "Comments": "Comentarios",
+    "WriteAComment": "Escribir un Comentario",
+    "Reply": "Responder",
+    "Quote": "Citar"
+  },
+  "CART": {
+    "Cart": "Carrito",
+    "Items": "artículos",
+    "Remove": "Eliminar",
+    "OrderSummary": "Resumen del Pedido",
+    "Subtotal": "Subtotal",
+    "Total": "Total",
+    "Taxes": "Impuestos",
+    "Checkout": "Pagar"
+  }
+}

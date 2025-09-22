@@ -1,0 +1,137 @@
+.header {
+  position: relative;
+  top: 0;
+  z-index: 10;
+  height: 70vh;
+  background: url('/assets/hero-gaming.jpg') no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  color: white;
+}
+
+.col {
+  margin: 0 20px auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: .5px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  .close-btn {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    width: 70%;
+    max-width: 280px;
+    height: 100vh;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+
+    &.open {
+      right: 0;
+    }
+    .close-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav__item {
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+
+  &.active {
+    color: var(--brand);
+  }
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.header-title {
+  margin-bottom: 50px;
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+  }
+}
+
+select {
+  appearance: none; /* removes default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 28px 6px 12px; /* extra right padding for arrow */
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  /* smooth transitions */
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: var(--brand);
+    background: rgba(0,0,0,0.7);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--brand);
+  }
+}

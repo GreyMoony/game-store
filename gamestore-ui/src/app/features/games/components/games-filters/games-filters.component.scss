@@ -1,0 +1,58 @@
+.filters {
+  background: var(--bg-3);
+  padding: 1rem;
+  border-radius: 8px;
+
+  h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.25rem;
+  }
+
+  select,
+  input[type="number"] {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  .price-range {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    input {
+      flex: 1;
+    }
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    label {
+      font-weight: normal;
+      border-bottom: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    accent-color: var(--brand);
+  }
+}

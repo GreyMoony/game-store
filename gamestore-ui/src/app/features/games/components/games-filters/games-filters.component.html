@@ -1,0 +1,60 @@
+<h2>{{ 'GAMESLIST.RefineResults' | t }}</h2>
+<div class="filters">
+
+  <!-- Sorting -->
+  <label for="sort">{{ 'GAMESLIST.Sorting' | t }}</label>
+  <select id="sort" [(ngModel)]="filters.sort" (change)="onChange()">
+    <option value="" disabled selected hidden>{{ 'GAMESLIST.SelectSorting' | t }}</option>
+    <option *ngFor="let s of sortingOptions" [value]="s">{{ "GAMESLIST."+s | t}}</option>
+  </select>
+
+  <!-- Price -->
+  <label for="price-min">{{ 'GAMESLIST.PriceRange' | t }}</label>
+  <div class="price-range">
+    <input id="price-min" type="number" placeholder="From" [(ngModel)]="filters.minPrice" (input)="onChange()" />
+    <input id="price-max" type="number" placeholder="To" [(ngModel)]="filters.maxPrice" (input)="onChange()" />
+  </div>
+
+  <!-- Publisher -->
+  <label for="publishers">{{ 'GAMESLIST.Publisher' | t }}</label>
+  <div id="publishers" class="checkbox-group">
+    <div *ngFor="let pub of publishers">
+      <label [for]="'publisher-' + pub.id">
+        <input type="checkbox" [id]="'publisher-' + pub.id" [value]="pub.id"
+          [checked]="filters.publishers.includes(pub.id)" (change)="onCheckboxChange('publishers', $event)" />
+        {{ pub.companyName }}
+      </label>
+    </div>
+  </div>
+
+  <!-- Release Date -->
+  <label for="dates">{{ 'GAMESLIST.ReleaseDate' | t }}</label>
+  <div *ngFor="let d of publishDateOptions">
+    <input type="radio" name="date" [value]="d" [(ngModel)]="filters.datePublishing" (change)="onChange()" />
+    {{ d }}
+  </div>
+
+  <!-- Genre -->
+  <label for="genres">{{ 'GAMESLIST.Genre' | t }}</label>
+  <div id="genres" class="checkbox-group">
+    <div *ngFor="let g of genres">
+      <label [for]="'genre-' + g.id">
+        <input type="checkbox" [id]="'genre-' + g.id" [value]="g.id" [checked]="filters.genres.includes(g.id)"
+          (change)="onCheckboxChange('genres', $event)" />
+        {{ g.name }}
+      </label>
+    </div>
+  </div>
+
+  <!-- Platform -->
+  <label for="platforms">{{ 'GAMESLIST.Platform' | t }}</label>
+  <div id="platforms" class="checkbox-group">
+    <div *ngFor="let p of platforms">
+      <label [for]="'platform-' + p.id">
+        <input type="checkbox" [id]="'platform-' + p.id" [value]="p.id" [checked]="filters.platforms.includes(p.id)"
+          (change)="onCheckboxChange('platforms', $event)" />
+        {{ p.type }}
+      </label>
+    </div>
+  </div>
+</div>

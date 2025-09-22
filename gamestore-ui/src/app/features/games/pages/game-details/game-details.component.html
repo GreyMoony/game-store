@@ -1,0 +1,102 @@
+<div class="game-page" *ngIf="!loading && game; else loadingTpl">
+
+  <a routerLink="/games" class="back-link">← {{ 'GAMEDETAILS.GoBack' | t }}</a>
+
+  <div class="hero">
+    <!-- Left: main image + thumbnails -->
+    <div class="media">
+      <div class="main-image">
+        <img [src]="imageUrl" [alt]="game!.name" />
+      </div>
+
+      <div class="thumbs">
+        <!-- For multiple images, list them here. For now we repeat the same endpoint. -->
+        <img [src]="imageUrl" alt="thumb" (click)="setMainImage(imageUrl)" />
+        <img [src]="imageUrl" alt="thumb" (click)="setMainImage(imageUrl)" />
+        <img [src]="imageUrl" alt="thumb" (click)="setMainImage(imageUrl)" />
+        <img [src]="imageUrl" alt="thumb" (click)="setMainImage(imageUrl)" />
+      </div>
+    </div>
+    <!-- Right: details -->
+    <div class="details">
+      <h1>{{ game!.name }}</h1>
+
+      <div class="price-row">
+        <ng-container *ngIf="hasDiscount; else noDiscount">
+          <span class="old-price">{{ oldPrice | currency }}</span>
+          <span class="new-price">{{ discountedPrice | currency }}</span>
+          <span class="badge">-{{ game!.discount }}%</span>
+          <span class="tax">{{ 'GAMEDETAILS.Tax' | t }}: {{ tax | currency }}</span>
+        </ng-container>
+        <ng-template #noDiscount>
+          <span class="new-price">{{ oldPrice | currency }}</span>
+          <span class="tax">{{ 'GAMEDETAILS.Tax' | t }}: {{ tax | currency }}</span>
+        </ng-template>
+      </div>
+
+      <div class="stars-row underlined">
+        <div class="stars">
+          <span *ngFor="let s of [1,2,3,4,5]" (click)="rating = s" [class.active]="s <= rating">★</span>
+        </div>
+        <div class="comments-count">{{ totalComments }} {{ 'GAMEDETAILS.Comments' | t }}</div>
+      </div>
+
+      <!-- Meta badges -->
+      <div class="meta">
+        <div class="meta-line" *ngIf="publisher">
+          <span class="label">{{ publisher.companyName }}</span>
+        </div>
+
+        <div class="meta-line" *ngIf="platforms.length">
+          <span class="label">{{ 'GAMEDETAILS.PlayableOn' | t }}</span>
+          <div class="chips">
+            <span class="chip" *ngFor="let p of platforms">{{ p.type }}</span>
+          </div>
+        </div>
+
+        <div class="meta-line" *ngIf="genres.length">
+          <span class="label">{{ 'GAMEDETAILS.Genres' | t }}</span>
+          <div class="chips">
+            <span class="chip" *ngFor="let g of genres">{{ g.name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" (click)="addToCart()">{{ 'GAMEDETAILS.AddToCart' | t }}</button>
+
+      <div class="content">
+        <h3>{{ 'GAMEDETAILS.GameDescription' | t }}</h3>
+        <p>{{ game!.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comments -->
+  <section class="comments">
+    <div class="comments-header">
+      <div class="title">
+        <div class="mini-stars">
+          <span *ngFor="let s of [1,2,3,4,5]" [class.active]="s <= rating">★</span>
+        </div>
+        <h3>{{ totalComments }} {{ 'GAMEDETAILS.Comments' | t }}</h3>
+      </div>
+
+      <button class="btn-outline" disabled title="Coming soon">{{ 'GAMEDETAILS.WriteAComment' | t }}</button>
+    </div>
+
+    <app-comment-thread *ngFor="let c of comments" [comment]="c" [isLiked]="isLiked" [likesFor]="likesFor"
+      [toggleLike]="toggleLike">
+    </app-comment-thread>
+  </section>
+
+</div>
+
+<!-- Loading skeleton -->
+<ng-template #loadingTpl>
+  <div class="loading">
+    <div class="skeleton hero-left"></div>
+    <div class="skeleton hero-right"></div>
+    <div class="skeleton section"></div>
+    <div class="skeleton section"></div>
+  </div>
+</ng-template>

@@ -1,0 +1,123 @@
+$line: #e7e8eb;
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  column-gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid $line;
+
+  .thumb {
+    width: 112px;
+    height: 112px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      .title {
+        font-weight: 600;
+        color: #111827;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .remove {
+        background: transparent;
+        border: 0;
+        color: var(--brand);
+        cursor: pointer;
+        padding: 0;
+        font-size: .9rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+
+      .now {
+        font-weight: 700;
+        color: #111827;
+      }
+
+      .old {
+        color: var(--muted);
+        text-decoration: line-through;
+        font-size: .95rem;
+      }
+    }
+
+    .qty {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .button {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $line;
+        background: #fff;
+        cursor: pointer;
+        line-height: 1;
+        font-size: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+
+        &:hover {
+          filter: brightness(0.97);
+          background-color: var(--brand);
+          color: white;
+        }
+
+        &:active {
+          filter: brightness(0.92);
+        }
+      }
+
+      .val {
+        min-width: 26px;
+        height: 26px;
+        padding: 0 6px;
+        border: 1px solid $line;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+      }
+    }
+  }
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .cart-item {
+    grid-template-columns: 88px 1fr;
+
+    .thumb {
+      width: 88px;
+      height: 88px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<div class="cart-container">
+
+
+  <div class="cart-content">
+    <!-- Left: items -->
+    <section class="cart-items">
+      <div class="cart-header">
+        <h2>{{ 'CART.Cart' | t }}</h2>
+        <div class="items-count">{{ (count$ | async) || 0 }} {{ 'CART.Items' | t }}</div>
+      </div>
+      <app-cart-item *ngFor="let item of items$ | async" [item]="item">
+      </app-cart-item>
+    </section>
+
+    <!-- Right: order summary -->
+    <aside class="cart-summary" *ngIf="(subtotal$ | async) as subtotal">
+      <h3>{{ 'CART.OrderSummary' | t }}</h3>
+
+      <div class="summary-row">
+        <span>{{ 'CART.Subtotal' | t }}</span>
+        <span>${{ subtotal.toFixed(2) }}</span>
+      </div>
+      <div class="summary-row">
+        <span>{{ 'CART.Taxes' | t }}</span>
+        <span>${{ calcTax(subtotal).toFixed(2) }}</span>
+      </div>
+      <div class="summary-row total">
+        <span>{{ 'CART.Total' | t }}</span>
+        <span class="total-amount">${{ calcTotal(subtotal).toFixed(2) }}</span>
+      </div>
+
+      <button class="checkout-btn">{{ 'CART.Checkout' | t }}</button>
+    </aside>
+  </div>
+</div>

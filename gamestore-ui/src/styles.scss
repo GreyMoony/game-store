@@ -1,0 +1,51 @@
+:root{
+  --bg: #e9e9ee;
+  --bg-2: #141416;
+  --bg-3: #f8f9fa;
+  --panel: #1c1d21;
+  --text: #333;
+  --muted: #a5a6ad;
+  --brand: #ff8b2b;
+  --brand-2: #ffab66;
+  --border: #2b2d33;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 44px; padding: 0 20px; border-radius: 10px;
+  border: 1px solid transparent; cursor: pointer; font-weight: 600;
+  background: var(--brand); color: var(--bg); transition: .15s ease;
+}
+.btn:hover { filter: brightness(1.2); }
+
+.grid {
+  display: grid; gap: 24px;
+}
+.grid-2 {
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 640px){
+  .grid-2,
+  .grid-3 { grid-template-columns: 1fr; }
+}
+a { color: inherit; text-decoration: none; }
+
+

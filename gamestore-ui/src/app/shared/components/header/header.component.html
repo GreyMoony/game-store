@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="col">
+    <div class="row">
+      <div class="logo">
+        {{ 'HEADER.LOGO' | t }}
+          <select [(ngModel)]="selectedLanguage" (change)="changeLanguage(selectedLanguage)">
+            <option value="en">en</option>
+            <option value="uk">uk</option>
+            <option value="es">es</option>
+          </select>
+      </div>
+      <!-- Burger button (mobile only) -->
+      <button class="burger" (click)="toggleNav()">☰</button>
+
+      <nav class="nav" [class.open]="navOpen">
+        <a routerLink="games" routerLinkActive="active" class="nav__item">
+          {{ 'HEADER.GAMES' | t }}
+        </a>
+        <span class="nav__item">{{ 'HEADER.GENRES' | t }}</span>
+        <span class="nav__item">{{ 'HEADER.PUBLISHERS' | t }}</span>
+        <span class="nav__item">{{ 'HEADER.ORDERS' | t }}</span>
+        <a routerLink="cart" routerLinkActive="active" class="nav__item">
+          {{ 'HEADER.CART' | t }}({{ cartCount$ | async }})
+        </a>
+        <button class="close-btn" (click)="navOpen = false">✕</button>
+      </nav>
+    </div>
+
+    <div class="header-title">
+      <h1>What Can Make Your<br />Life Easier?</h1>
+      <p>Empowered Solutions with Simple Process</p>
+    </div>
+  </div>
+</header>
