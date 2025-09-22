@@ -1,0 +1,8 @@
+.vs/
+bin/
+obj/
+logs/
+microservice/
+/Gamestore/Gamestore/obj/project.assets.json
+/Gamestore/Gamestore/obj/project.nuget.cache
+/GameStore.API/Properties/launchSettings.json
