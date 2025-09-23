@@ -54,6 +54,22 @@ builder.Services.ConfigureCors();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<GameStoreContext>();
+
+    context.Database.Migrate();
+    GameStoreSeedData.Seed(context, 100000);
+
+    var productKeyCreator = scope.ServiceProvider.GetRequiredService<ProductKeyCreator>();
+    await productKeyCreator.AddKeyToProductsAsync();
+
+    // Міграції для Identity
+    var identityContext = services.GetRequiredService<AuthDbContext>();
+    identityContext.Database.Migrate();
+}
+
 await IdentitySeedData.SeedIdentityDataAsync(app.Services);
 
 // Configure the HTTP request pipeline.
@@ -84,18 +100,6 @@ app.UseAuthorization();
 app.UseMiddleware<TotalNumberOfGamesMiddleware>();
 
 app.MapControllers();
-
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<GameStoreContext>();
-
-    context.Database.Migrate();
-    GameStoreSeedData.Seed(context, 100000);
-
-    var productKeyCreator = scope.ServiceProvider.GetRequiredService<ProductKeyCreator>();
-    await productKeyCreator.AddKeyToProductsAsync();
-}
 
 app.Run();
 
