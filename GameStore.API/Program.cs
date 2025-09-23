@@ -60,7 +60,7 @@ using (var scope = app.Services.CreateScope())
     var context = services.GetRequiredService<GameStoreContext>();
 
     context.Database.Migrate();
-    GameStoreSeedData.Seed(context, 100000);
+    GameStoreSeedData.Seed(context, 100);
 
     var productKeyCreator = scope.ServiceProvider.GetRequiredService<ProductKeyCreator>();
     await productKeyCreator.AddKeyToProductsAsync();

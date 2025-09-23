@@ -54,6 +54,11 @@ public static class ServiceCollectionExtensions
                 {
                     o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
                     o.CommandTimeout(120);
+
+                    o.EnableRetryOnFailure(
+                        maxRetryCount: 5,
+                        maxRetryDelay: TimeSpan.FromSeconds(10),
+                        errorNumbersToAdd: null);
                 }));
         services.AddScoped<IGameRepository, GameRepository>();
         services.AddScoped<IGenreRepository, GenreRepository>();
