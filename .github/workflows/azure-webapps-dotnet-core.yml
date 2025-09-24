@@ -60,6 +60,10 @@ jobs:
         # --no-build, бо build вже зробили, щоб уникнути повторної збірки
         # Всі потрібні DLL (включно з System.IdentityModel.Tokens.Jwt) будуть у цій папці
 
+      - name: List publish directory
+        run: ls -la ${{ env.PUBLISH_DIR }}
+
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
