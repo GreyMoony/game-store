@@ -36,16 +36,6 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
         # Встановлюємо потрібну версію .NET (8.0.x)
 
-      - name: Cache NuGet packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-        # Кешуємо NuGet пакети, щоб збірка була швидшою. 
-        # hashFiles забезпечує оновлення кешу при зміні packages.lock.json
-
       - name: Restore dependencies
         run: dotnet restore
         # Встановлює всі NuGet пакети, щоб build не падав через відсутні DLL
