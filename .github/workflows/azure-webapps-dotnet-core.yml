@@ -80,7 +80,8 @@ jobs:
         with:
           name: .net-app
         # Завантажуємо опубліковану папку з build job
-
+      - name: List publish directory
+        run: ls -la ./
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
