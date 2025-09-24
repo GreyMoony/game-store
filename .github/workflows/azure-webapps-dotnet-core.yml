@@ -55,7 +55,7 @@ jobs:
         # Збираємо проект у Release конфігурації. --no-restore, бо пакети вже відновили
 
       - name: Publish app
-        run: dotnet publish -c Release -o ${{ env.PUBLISH_DIR }} --no-build
+        run: dotnet publish -c Release -o ${{ env.PUBLISH_DIR }} --no-build --self-contained false
         # Публікуємо проект у папку PUBLISH_DIR
         # --no-build, бо build вже зробили, щоб уникнути повторної збірки
         # Всі потрібні DLL (включно з System.IdentityModel.Tokens.Jwt) будуть у цій папці
