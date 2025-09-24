@@ -58,6 +58,16 @@
           "Microsoft.Extensions.Options": "9.0.0"
         }
       },
+      "Microsoft.IdentityModel.Protocols": {
+        "type": "Direct",
+        "requested": "[7.1.2, )",
+        "resolved": "7.1.2",
+        "contentHash": "SydLwMRFx6EHPWJ+N6+MVaoArN1Htt92b935O3RUWPY1yUF63zEjvd3lBu79eWdZUwedP8TN2I5V9T3nackvIQ==",
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.1.2",
+          "Microsoft.IdentityModel.Tokens": "7.1.2"
+        }
+      },
       "Newtonsoft.Json": {
         "type": "Direct",
         "requested": "[13.0.3, )",
@@ -522,15 +532,6 @@
           "Microsoft.IdentityModel.Abstractions": "7.1.2"
         }
       },
-      "Microsoft.IdentityModel.Protocols": {
-        "type": "Transitive",
-        "resolved": "6.35.0",
-        "contentHash": "BPQhlDzdFvv1PzaUxNSk+VEPwezlDEVADIKmyxubw7IiELK18uJ06RQ9QKKkds30XI+gDu9n8j24XQ8w7fjWcg==",
-        "dependencies": {
-          "Microsoft.IdentityModel.Logging": "6.35.0",
-          "Microsoft.IdentityModel.Tokens": "6.35.0"
-        }
-      },
       "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
         "type": "Transitive",
         "resolved": "6.35.0",
@@ -817,6 +818,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "[8.0.20, )",
           "Microsoft.EntityFrameworkCore": "[8.0.20, )",
           "Microsoft.EntityFrameworkCore.SqlServer": "[8.0.20, )",
+          "Microsoft.IdentityModel.Protocols": "[7.1.2, )",
           "MongoDB.Driver": "[3.1.0, )",
           "System.IdentityModel.Tokens.Jwt": "[7.1.2, )"
         }

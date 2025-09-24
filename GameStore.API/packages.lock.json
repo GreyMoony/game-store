@@ -1137,6 +1137,7 @@
           "GameStore.Domain": "[1.0.0, )",
           "Microsoft.Extensions.Hosting.Abstractions": "[8.0.1, )",
           "Microsoft.Extensions.Http": "[9.0.0, )",
+          "Microsoft.IdentityModel.Protocols": "[7.1.2, )",
           "Newtonsoft.Json": "[13.0.3, )",
           "Polly": "[8.5.0, )",
           "QuestPDF": "[2024.10.4, )",
@@ -1153,6 +1154,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "[8.0.20, )",
           "Microsoft.EntityFrameworkCore": "[8.0.20, )",
           "Microsoft.EntityFrameworkCore.SqlServer": "[8.0.20, )",
+          "Microsoft.IdentityModel.Protocols": "[7.1.2, )",
           "MongoDB.Driver": "[3.1.0, )",
           "System.IdentityModel.Tokens.Jwt": "[7.1.2, )"
         }
