@@ -33,6 +33,26 @@
           "Mono.TextTemplating": "2.2.1"
         }
       },
+      "Microsoft.IdentityModel.Protocols": {
+        "type": "Direct",
+        "requested": "[7.1.2, )",
+        "resolved": "7.1.2",
+        "contentHash": "SydLwMRFx6EHPWJ+N6+MVaoArN1Htt92b935O3RUWPY1yUF63zEjvd3lBu79eWdZUwedP8TN2I5V9T3nackvIQ==",
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.1.2",
+          "Microsoft.IdentityModel.Tokens": "7.1.2"
+        }
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
+        "type": "Direct",
+        "requested": "[7.1.2, )",
+        "resolved": "7.1.2",
+        "contentHash": "6lHQoLXhnMQ42mGrfDkzbIOR3rzKM1W1tgTeMPLgLCqwwGw0d96xFi/UiX/fYsu7d6cD5MJiL3+4HuI8VU+sVQ==",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "7.1.2",
+          "System.IdentityModel.Tokens.Jwt": "7.1.2"
+        }
+      },
       "Newtonsoft.Json": {
         "type": "Direct",
         "requested": "[13.0.3, )",
@@ -643,24 +663,6 @@
           "Microsoft.IdentityModel.Abstractions": "7.1.2"
         }
       },
-      "Microsoft.IdentityModel.Protocols": {
-        "type": "Transitive",
-        "resolved": "7.1.2",
-        "contentHash": "SydLwMRFx6EHPWJ+N6+MVaoArN1Htt92b935O3RUWPY1yUF63zEjvd3lBu79eWdZUwedP8TN2I5V9T3nackvIQ==",
-        "dependencies": {
-          "Microsoft.IdentityModel.Logging": "7.1.2",
-          "Microsoft.IdentityModel.Tokens": "7.1.2"
-        }
-      },
-      "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
-        "type": "Transitive",
-        "resolved": "7.1.2",
-        "contentHash": "6lHQoLXhnMQ42mGrfDkzbIOR3rzKM1W1tgTeMPLgLCqwwGw0d96xFi/UiX/fYsu7d6cD5MJiL3+4HuI8VU+sVQ==",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols": "7.1.2",
-          "System.IdentityModel.Tokens.Jwt": "7.1.2"
-        }
-      },
       "Microsoft.IdentityModel.Tokens": {
         "type": "Transitive",
         "resolved": "7.1.2",
@@ -1138,11 +1140,11 @@
           "Microsoft.Extensions.Hosting.Abstractions": "[8.0.1, )",
           "Microsoft.Extensions.Http": "[9.0.0, )",
           "Microsoft.IdentityModel.Protocols": "[7.1.2, )",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "[7.1.2, )",
           "Newtonsoft.Json": "[13.0.3, )",
           "Polly": "[8.5.0, )",
           "QuestPDF": "[2024.10.4, )",
-          "SendGrid": "[9.29.3, )",
-          "System.IdentityModel.Tokens.Jwt": "[7.1.2, )"
+          "SendGrid": "[9.29.3, )"
         }
       },
       "gamestore.dal": {
@@ -1155,6 +1157,7 @@
           "Microsoft.EntityFrameworkCore": "[8.0.20, )",
           "Microsoft.EntityFrameworkCore.SqlServer": "[8.0.20, )",
           "Microsoft.IdentityModel.Protocols": "[7.1.2, )",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "[7.1.2, )",
           "MongoDB.Driver": "[3.1.0, )",
           "System.IdentityModel.Tokens.Jwt": "[7.1.2, )"
         }
@@ -1163,6 +1166,8 @@
         "type": "Project",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "[8.0.8, )",
+          "Microsoft.IdentityModel.Protocols": "[7.1.2, )",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "[7.1.2, )",
           "MongoDB.Bson": "[3.1.0, )"
         }
       }

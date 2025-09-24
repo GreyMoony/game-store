@@ -84,6 +84,16 @@
           "Microsoft.IdentityModel.Tokens": "7.1.2"
         }
       },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
+        "type": "Direct",
+        "requested": "[7.1.2, )",
+        "resolved": "7.1.2",
+        "contentHash": "6lHQoLXhnMQ42mGrfDkzbIOR3rzKM1W1tgTeMPLgLCqwwGw0d96xFi/UiX/fYsu7d6cD5MJiL3+4HuI8VU+sVQ==",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "7.1.2",
+          "System.IdentityModel.Tokens.Jwt": "7.1.2"
+        }
+      },
       "MongoDB.Driver": {
         "type": "Direct",
         "requested": "[3.1.0, )",
@@ -450,15 +460,6 @@
           "Microsoft.IdentityModel.Abstractions": "7.1.2"
         }
       },
-      "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
-        "type": "Transitive",
-        "resolved": "6.35.0",
-        "contentHash": "LMtVqnECCCdSmyFoCOxIE5tXQqkOLrvGrL7OxHg41DIm1bpWtaCdGyVcTAfOQpJXvzND9zUKIN/lhngPkYR8vg==",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols": "6.35.0",
-          "System.IdentityModel.Tokens.Jwt": "6.35.0"
-        }
-      },
       "Microsoft.IdentityModel.Tokens": {
         "type": "Transitive",
         "resolved": "7.1.2",
@@ -797,6 +798,8 @@
         "type": "Project",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "[8.0.8, )",
+          "Microsoft.IdentityModel.Protocols": "[7.1.2, )",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "[7.1.2, )",
           "MongoDB.Bson": "[3.1.0, )"
         }
       }

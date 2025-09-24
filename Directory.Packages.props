@@ -1,0 +1,7 @@
+﻿<Project>
+	<ItemGroup>
+		<PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols" Version="7.1.2.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.1.2.0" />
+	</ItemGroup>
+</Project>
