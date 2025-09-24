@@ -11,6 +11,8 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+
 // Configure Serilog to read from appsettings.json
 builder.Host.UseSerilog((context, loggerConfiguration) =>
 {
